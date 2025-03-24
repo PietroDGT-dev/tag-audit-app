@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Report Audit - <%= result.url %></title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    h1 { color: #333; }
+    ul { line-height: 1.6; }
+    .ok { color: green; }
+    .fail { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Report Audit</h1>
+  <p><strong>URL:</strong> <%= result.url %></p>
+  <ul>
+    <li>Google Tag Manager: <span class="<%= result.GTM ? 'ok' : 'fail' %>"><%= result.GTM %></span></li>
+    <li>Google Analytics 4: <span class="<%= result.GA4 ? 'ok' : 'fail' %>"><%= result.GA4 %></span></li>
+    <li>Google Ads: <span class="<%= result.GoogleAds ? 'ok' : 'fail' %>"><%= result.GoogleAds %></span></li>
+    <li>Meta Pixel: <span class="<%= result.MetaPixel ? 'ok' : 'fail' %>"><%= result.MetaPixel %></span></li>
+    <li>Cookiebot: <span class="<%= result.CMP.Cookiebot ? 'ok' : 'fail' %>"><%= result.CMP.Cookiebot %></span></li>
+    <li>Iubenda: <span class="<%= result.CMP.Iubenda ? 'ok' : 'fail' %>"><%= result.CMP.Iubenda %></span></li>
+    <li>Onetrust: <span class="<%= result.CMP.Onetrust ? 'ok' : 'fail' %>"><%= result.CMP.Onetrust %></span></li>
+  </ul>
+</body>
+</html>

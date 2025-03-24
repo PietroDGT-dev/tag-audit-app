@@ -1,0 +1,14 @@
+{
+  "name": "tag-audit-app",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "puppeteer": "^21.3.8"
+  }
+}
